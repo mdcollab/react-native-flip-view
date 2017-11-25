@@ -6,6 +6,7 @@ var {Component} = React;
 var ReactNative = require('react-native');
 var {
   View,
+  ViewPropTypes,
   Easing,
   StyleSheet,
   Animated,
@@ -15,7 +16,7 @@ var PropTypes = require('prop-types');
 
 class FlipView extends Component {
   static propTypes = {
-    style: View.propTypes.style,
+    style: ViewPropTypes.style,
     flipDuration: PropTypes.number,
     flipEasing: PropTypes.func,
     flipAxis: PropTypes.oneOf(['x', 'y']),
