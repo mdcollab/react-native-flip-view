@@ -135,6 +135,7 @@ var styles = StyleSheet.create({
     right: 0,
     bottom: 0,
     backfaceVisibility: 'hidden',
+    ...(window && window.chrome? {opacity: 0.999}: {}),  // chrome doesn't honor backfaceVisibility without this
   }
 });
 
